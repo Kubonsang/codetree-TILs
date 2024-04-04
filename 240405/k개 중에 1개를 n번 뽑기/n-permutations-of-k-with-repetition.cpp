@@ -25,6 +25,6 @@ void select(int i) {
 }
 
 int main() {
-	cin >> n >> k;
+	cin >> k >> n;
 	select(1);
 }
