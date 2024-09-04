@@ -8,9 +8,12 @@ int main() {
 
     cin >> n;
 
-    while(n > 0){
+    while(true){
         digits.push_back(n % 2);
         n /= 2;
+        if(n == 0){
+            break;
+        }
     }
 
     int upperbound = digits.size();
