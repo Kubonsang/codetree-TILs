@@ -13,7 +13,10 @@ int main() {
         answer += months[i];
     }
 
-    answer += d2- d1;
+    answer += d2 - d1;
+    if(m1 == m2){
+        answer += 1;
+    }
 
     cout << answer;
 
