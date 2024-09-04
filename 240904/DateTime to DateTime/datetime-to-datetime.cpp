@@ -8,6 +8,15 @@ int main() {
 
     cin >> inputD >> inputH >> inputM;
 
+    if(inputD == 11 && inputH < 11){
+        cout << -1;
+        return 0;
+    }
+    if(inputD == 11 && inputH == 11 && inputM < 11){
+        cout << -1;
+        return 0;
+    }
+
 
     answer += (inputM - 11) + (inputH - 11) * aHour + (inputD - 11) * aDay;
     cout << answer;
