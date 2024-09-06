@@ -13,24 +13,22 @@ int main() {
 
     for(int i = 0; i < n; i++){
         cin >> deltaPos >> direction;
-        deltaPos--;
+        deltaPos -= 1;
+
         if(direction == 'L'){
             deltaPos *= -1;
         }
-
         if(direction == 'L'){
             for(int j = currentPos + deltaPos; j <= currentPos; j++){
                 arr[j] += 'W';
             }
         }
-        else{
-            for(int j = currentPos; j <= currentPos + deltaPos; j++){
+        else {
+            for (int j = currentPos; j <= currentPos + deltaPos; j++){
                 arr[j] += 'B';
             }
         }
-
         currentPos += deltaPos;
-
     }
     int b = 0, w = 0, g = 0;
     for(int i = 0; i < 200001; i++){
@@ -46,14 +44,7 @@ int main() {
             g++;
         }
     }
-    /*
-    for(int i = 100000- 5; i <= 100000 + 5; i++){
-        if(arr[i] == "")
-            cout << "null";
-        cout << arr[i] << ' ';
-    }
-    cout << endl;
-    */
+
     cout << w << ' ' << b << ' ' << g;
 
 
