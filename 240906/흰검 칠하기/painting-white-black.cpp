@@ -31,8 +31,17 @@ int main() {
         currentPos += deltaPos;
     }
     int b = 0, w = 0, g = 0;
+    int ba = 0, wa = 0;
     for(int i = 0; i < 200001; i++){
-        if(arr[i].length() < 4){
+        for(int j = 0; j < arr[i].length(); j++){
+            if(arr[i][j] == 'B'){
+                ba++;
+            }
+            else if(arr[i][j] == 'W'){
+                wa++;
+            }
+        }
+        if(!(ba >= 2 && wa >= 2)){
             if(arr[i].back() == 'B'){
                 b++;
             }
@@ -43,6 +52,8 @@ int main() {
         else{
             g++;
         }
+        wa = 0;
+        ba = 0;
     }
 
     cout << w << ' ' << b << ' ' << g;
