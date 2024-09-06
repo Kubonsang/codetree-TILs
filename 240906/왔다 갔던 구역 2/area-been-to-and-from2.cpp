@@ -16,7 +16,7 @@ int main() {
         }
 
         if(direct == 'L'){
-            for(int j = currentPos; j > currentPos + deltaPos; j--) {
+            for(int j = currentPos + deltaPos; j < currentPos; j++) {
                 arr[j]++;
             }
         }
@@ -29,11 +29,16 @@ int main() {
         currentPos += deltaPos;
     }
 
-    int size = 0;
+    int size = 0, startPos, endPos;
+    bool continous = false;
     for(int i = 0; i < 2001; i++){
         if(arr[i] >= 2){
             size++;
         }
+
+
+
+
     }
 
     cout << size;
