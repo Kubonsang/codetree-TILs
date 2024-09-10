@@ -10,16 +10,16 @@ int main() {
     for(int i = 0; i < n; i++){
         cin >> arr[i];
     }
-    int max = 1, cnt = 0;
+    int max = 1, cnt = 1;
     for(int i = 1; i < n; i++){
         if(arr[i] == arr[i - 1]){
             cnt++;
         }
         else {
-            if(max < cnt){
-                max = cnt;
-            }
             cnt = 1;
+        }
+        if(max < cnt){
+            max = cnt;
         }
     }
 
