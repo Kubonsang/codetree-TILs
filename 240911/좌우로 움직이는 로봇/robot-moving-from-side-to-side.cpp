@@ -12,11 +12,13 @@ int main() {
         cin >> deltaSec >> direct;
         if(direct == 'L'){
             for(int j = 0; j <= deltaSec; j++){
+                aSize++;
                 a.push_back(curPos--);
             }
         }
         else{
             for(int j = 0; j <= deltaSec; j++){
+                aSize++;
                 a.push_back(curPos++);
             }
         }
@@ -28,24 +30,30 @@ int main() {
         cin >> deltaSec >> direct;
         if(direct == 'L'){
             for(int j = 0; j <= deltaSec; j++){
+                bSize++;
                 b.push_back(curPos--);
             }
         }
         else{
             for(int j = 0; j <= deltaSec; j++){
+                bSize++;
                 b.push_back(curPos++);
             }
         }
     }
 
-    for(int i = 0; i < 100000; i++){
-        a.push_back(a.back());
-        b.push_back(b.back());
+
+    if(aSize > bSize){
+        for(int i = 0; i < aSize - bSize; i++){
+            b.push_back(b.back());
+        }
+    }
+    else if(aSize < bSize){
+        for(int i = 0; i < bSize - aSize; i++){
+            a.push_back(a.back());
+        }
     }
 
-
-
-    
 
     int answer = 0;
     for(int i = 2; i < a.size(); i++){
