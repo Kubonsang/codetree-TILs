@@ -33,7 +33,7 @@ int main() {
             arr.push_back(1);
         }
         else if (a[i] == b[i]){
-            arr.push_back(arr.back());
+            arr.push_back(0);
         }
         else if (a[i] < b[i]){
             arr.push_back(-1);
@@ -41,7 +41,7 @@ int main() {
     }
 
     for(int i = 2; i < arr.size(); i++){
-        if(arr[i - 1] != arr[i]){
+        if(arr[i - 1] != arr[i] && arr[i - 1] != 0){
             answer++;
         }
     }
