@@ -15,10 +15,10 @@ int main() {
     arr[r][c] = 1;
 
     if(direct == 'U'){
-        dir = 1;
+        dir = 3;
     }
     else if(direct == 'D'){
-        dir = 3;
+        dir = 1;
     }
     else if(direct == 'R'){
         dir = 0;
