@@ -43,6 +43,10 @@ int main() {
                 }
             }
         }
+
+        if(answer != -1){
+            break;
+        }
     }
     cout << answer;
     return 0;
