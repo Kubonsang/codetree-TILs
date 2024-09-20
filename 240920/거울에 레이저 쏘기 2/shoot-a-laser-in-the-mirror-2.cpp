@@ -55,17 +55,21 @@ int main() {
     cin >> k;
 
     for(int i = 1; i < k; i++){
+        //cout << r << " " << c << endl;
         if(!((r + dy[state] >= 0 && r + dy[state] < n) && (c + dx[state] >= 0 && c + dx[state] < n))){
             state = (state + 1) % 4;
+            continue;
         }
         r += dy[state];
         c += dx[state];
     }
+    //cout << r << " " << c << endl;
     
     state = (state + 1) % 4;
 
     int _answer = 0;
     while(true){
+        
         _answer++;
         getDirectInfo(r, c);
         r += dy[state];
