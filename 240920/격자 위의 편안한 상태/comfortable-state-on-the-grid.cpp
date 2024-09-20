@@ -6,7 +6,7 @@ vector<vector<int>> arr(100, vector<int>(100));
 int n, m, dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
 
 bool isInvalid(int r, int c){
-    return (r == 0 || c == 0) && (r == n - 1 && c == n - 1);
+    return (r == 0 || c == 0) && (r == n - 1 || c == n - 1);
 }
 
 bool isComfortable(int r, int c){
@@ -25,8 +25,6 @@ bool isComfortable(int r, int c){
 int main() {
     int r, c;
     cin >> n >> m;
-    
-
     for(int i = 0; i < m; i++){
         cin >> r >> c;
         r--;
