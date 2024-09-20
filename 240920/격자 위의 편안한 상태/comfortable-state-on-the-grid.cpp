@@ -6,7 +6,7 @@ vector<vector<int>> arr(100, vector<int>(100));
 int n, m, dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
 
 bool isInvalid(int r, int c){
-    return !((r >= 1 && r <= n - 1) && (c >= 1 && c <= n - 1));
+    return (r == 0 || c == 0) && (r == n - 1 && c == n - 1);
 }
 
 bool isComfortable(int r, int c){
