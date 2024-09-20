@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-vector<vector<int>> arr(101, vector<int>(101));
+vector<vector<int>> arr(100, vector<int>(100));
 int n, m, dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
 
 bool isInvalid(int r, int c){
@@ -29,6 +29,8 @@ int main() {
 
     for(int i = 0; i < m; i++){
         cin >> r >> c;
+        r--;
+        c--;
         arr[r][c] = 1;
         cout << (isComfortable(r, c) ? "1" : "0") << endl;
     }
