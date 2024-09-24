@@ -21,7 +21,8 @@ int main() {
 
 
     for(int k = 0; k < n * m; k++){
-        arr[y][x] = 'A' + k;
+        const int c = (k) % 26;
+        arr[y][x] = 'A' + c;
         if(isInvalidMove(dy[state], dx[state])){
             state++;
             if(state == 4){
